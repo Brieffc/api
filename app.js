@@ -1,3 +1,4 @@
+const port = 3000;
 const express = require("express");
 
 const app = express();
@@ -13,8 +14,8 @@ app.use(
 app.use(express.json());
 
 app.use(routes);
-const port = 3000;
 
 app.listen(3000, () => {
+  console.clear();
   console.log(`Server running on port ${port}`);
 });

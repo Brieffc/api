@@ -1,15 +1,15 @@
 const { DataTypes } = require("sequelize");
 const Sequelize = require("sequelize");
-const database = require("../../db/db");
+const database = require("../db");
 
-const Office = database.define("Office", {
+const Office = database.define("office", {
   id: {
     type: Sequelize.INTEGER,
     autoIncrement: true,
     allowNull: false,
     primaryKey: true,
   },
-  office: {
+  name: {
     type: DataTypes.STRING,
     allowNull: false,
   },
